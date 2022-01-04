@@ -1,17 +1,17 @@
 #ifndef  probablility_h
 #define  probablility_h
 #include<iostream>
+    
     template<typename T>
     float appearanceTimeNumber(T arrayToSearchIn[],T element,int size) {
         float times = 0;
-        for (int i = 0; i < size; i++)
-        {
-            if (arrayToSearchIn[i]==element)
-            {
-                times++;
-            }
+        size--;
+        if(arrayToSearchIn[size]==element)
+        times++;
+        if(size==0){  
+            return times;
         }
-        return times;
+        return (times + appearanceTimeNumber(arrayToSearchIn,element,size));
     }
     template<typename T,size_t n>
     float probablilityX(T (&SampleSpace)[n],T numberToFindProbabilityFor) {
