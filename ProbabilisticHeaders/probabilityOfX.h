@@ -1,6 +1,5 @@
 #ifndef  probablility_h
 #define  probablility_h
-#include<iostream>
     
     template<typename T>
     float appearanceTimeNumber(T arrayToSearchIn[],T element,int size) {
